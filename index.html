@@ -3,13 +3,18 @@ title: SOCH - Sikh Organization in Care of Humanity
 layout: default
 bodyClass: page-home
 ---
+<div class="container pt-1">
+  <embed title="Soch" src="swf/home_ani.swf" quality="high"
+    pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"
+    type="application/x-shockwave-flash" width="942" height="318">
+</div>
 
-<div class="intro pb-4">
+<!-- <div class="intro pb-1"> -->
   <div class="container">
-    <h1>SOCH</h1>
+    <h1 style="color:#1c3ed3">SOCH</h1>
     <p>Sikh Organization in Care of Humanity</p>
   </div>
-</div>
+<!-- </div> -->
 
 <div class="container pt-2">
   <div class="call">
@@ -29,7 +34,7 @@ bodyClass: page-home
 
 <div class="container pt-8 pt-md-10">
   <div class="row left-content-start">
-        
+
     <div class="col-12 text-left">
       <a class="button button-primary mt-2" href="{{site.baseurl}}/services">Projects</a>
     </div>
@@ -41,7 +46,8 @@ bodyClass: page-home
     {% for feature in site.data.features %}
     <div class="col-12 col-md-6 col-lg-4 mb-2">
       <div class="feature">
-        {% if feature.image %}<div class="feature-image"><img alt="{{ feature.title }} logo" src="{{ feature.image }}" /></div> {% endif %}
+        {% if feature.image %}<div class="feature-image"><img alt="{{ feature.title }} logo"
+            src="{{ feature.image }}" /></div> {% endif %}
         <h2 class="feature-title">{{ feature.title }}</h2>
         <div class="feature-content">{{ feature.description }}</div>
       </div>
