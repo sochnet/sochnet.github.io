@@ -7,22 +7,42 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './Components/Home';
 import Impact from './Components/Impact';
-import Initiatives from './Components/Initiatives';
+import WhoAreWe from './Components/whoAreWe';
+import WhatWeDo from './Components/whatWeDo';
+import WhoSupportUs from './Components/whoSupportUs';
+import Donate from './Components/Donate'
 import NotFound from './Components/NotFound'
+import JoinUs from './Components/joinUs'
+import ContactUs from './Components/contactUs'
 import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom';
 
+
 const routing = (
+    <React.Fragment>
     <Router>
         <div>
+                  
+<a class="navbar-brand" href="#"></a>  
             <Navbar collapseOnSelect bg="primary" variant="dark" expand="lg" fixed="top">
-                <Navbar.Brand as={Link} to="/">SOCH</Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+           
+                <Navbar.Brand as={Link} to="/"> <img class="logo" alt="Transparent MDB Logo" id="animated-img1" src={require("./assets/Images/SochLogo.svg")} alt=""/></Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link as={Link} to="/initiatives">Initiatives</Nav.Link>
-                        <Nav.Link as={Link} to="/impact">Impact</Nav.Link>
-                        <Nav.Link as={Link} to="/about">About Us</Nav.Link>
-                        <Nav.Link as={Link} to="/support">Support</Nav.Link>
+                    <Nav.Link as={Link} to="/">Home</Nav.Link>
+                    <div class="dropdown">
+                         
+                         <Nav.Link as={Link} to="#">About Us</Nav.Link>
+                        <div class="dropdown-content">
+                            <Nav.Link as={Link} to="/about/whoarewe">Who Are We</Nav.Link>
+                            <Nav.Link as={Link} to="/about/whatwedo">What We Do</Nav.Link>
+                            <Nav.Link as={Link} to="/whosupportus">Who Support Us</Nav.Link>
+                            <Nav.Link as={Link} to="/join">Join Us</Nav.Link>
+                            {/* <a href="/about/whatwedo">What We Do</a>
+                            <a href="/whosupportus">Who Support Us</a> */}
+                        </div>
+                        </div>
+                        <Nav.Link as={Link} to="/donate">Donate</Nav.Link>
                         <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
@@ -30,17 +50,20 @@ const routing = (
 
             <Switch>
                 <Route exact path="/" component={Home} />
-                <Route path="/initiatives" component={Initiatives} />
-                <Route path="/impact" component={Impact} />
-                <Route component={NotFound} />
+                <Route path="/about/whoarewe" component={WhoAreWe} />
+                <Route path="/about/whatwedo" component={WhatWeDo} />
+                <Route path="/whosupportus" component={WhoSupportUs} />
+                <Route path="/donate" component={Donate}/>
+                <Route path="/join" component={JoinUs}/>
+                <Route path="/contact" component={ContactUs}/>
+                <Route component={NotFound}/>
             </Switch>
-
         </div>
-
-        <footer class="footer">
+    </Router>
+    <footer class="footer">
             <div class="footer-copyright text-center py-3">© 2019 Copyright: Sochnet.com</div>
         </footer>
-    </Router>
+    </React.Fragment>
 )
 
 ReactDOM.render(routing, document.getElementById('root'));
