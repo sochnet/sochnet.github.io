@@ -1,15 +1,29 @@
 # SOCH Website
 
-Instructions to run:
+# Instructions to run:
 
-Checkout the project using `git clone`
-Install ruby and gem
-Run `gem install jekyll`
+Clone the git repository by using the url above.
 
-Open the repository root folder and run `bundle install` to install all dependencies from gemfile
+Navigate to the folder you just cloned then to the react-ui folder
+Open cmd prompt
 
-Finally jekyll serve to see a preview
+-> run following commands -> 
 
-You might face some version issues like you end up getting concurrent-ruby 1.1.5 but gemfile had concurrent-ruby 1.1.4. 
+1. Npm install react-scripts
 
-So the safest way to run is `bundle exec jekyll serve`
+
+2. Npm install bootstrap
+
+
+3. Npm install react
+
+
+4.Npm install react-bootstrap
+
+
+5.Npm install react-dom
+
+
+6.Npm install react-router-dom
+
+7.Npm start
